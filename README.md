@@ -21,6 +21,7 @@ scp vagrant@teamfu.tech:/home/backup/20220201-11\:22\:26-teamfu.db.tar /home/jac
 
 ### networks
 ```
+sudo netdiscover -r 10.0.0.0/24 -P
 netstat -tulpn
 arp
 sudo tcpdump -s0 -U -n -w - -i enp2s0
