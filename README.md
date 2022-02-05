@@ -3,6 +3,7 @@ personal Wiki for Jack with useful code
 
 ### docker
 ```
+docker run -d -e POSTGRES_PASSWORD=mypassword -e POSTGRES_USER=myuser -p 5442:5442 --name mypostgres postgres:14
 docker-compose up --build
 docker volume prune
 docker exec -it <container>
