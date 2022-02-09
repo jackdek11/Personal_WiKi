@@ -1,6 +1,45 @@
 # Personal_WiKi
 personal Wiki for Jack with useful code
 
+### Github ssh keys
+
+```
+cd .ssh
+ssh-keygen -t rsa -b 4096 -C "<email>" -f id_private
+eval "$(ssh-agent -s)"
+xclip -sel clip < ~/.ssh/id_private.pub
+cat ~/.ssh/id_private.pub
+chmod 400 ~/.ssh/id_private
+nano ~/.ssh/config
+# add the identity
+ssh-add id_private
+# list known identities
+ssh-add -l
+```
+### Github conf
+```
+git config --global user.name "Bank-Builder"
+# use a different email address per repo ...
+git config --global user.email "andrew@turpin.co.za"
+git config --global color.ui auto
+ssh -T git@github.com
+```
+### Docker install
+```
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+### Add docker to sudo group
+```
+sudo groupadd docker
+sudo usermod -a -G docker $USER
+sudo systemctl restart docker.service
+sudo apt install docker-compose
+```
 ### docker
 ```
 docker inspect <container_name>
