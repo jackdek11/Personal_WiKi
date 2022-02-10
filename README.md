@@ -24,6 +24,15 @@ git config --global user.email "<email>"
 git config --global color.ui auto
 ssh -T git@github.com
 ```
+if you get an error on incorrectly configured, something like "line 1: Bad configuration...",
+to resolve;
+```
+cd ~/.ssh
+rm -rf config
+ssh -T git@github.com
+```
+
+
 ### Docker install
 ```
 sudo apt-get remove docker docker-engine docker.io containerd runc
