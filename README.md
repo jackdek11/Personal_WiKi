@@ -18,9 +18,9 @@ ssh-add -l
 ```
 ### Github conf
 ```
-git config --global user.name "Bank-Builder"
+git config --global user.name "<usernamee>"
 # use a different email address per repo ...
-git config --global user.email "andrew@turpin.co.za"
+git config --global user.email "<email>"
 git config --global color.ui auto
 ssh -T git@github.com
 ```
