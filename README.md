@@ -33,7 +33,12 @@ sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
-### Add docker to sudo group
+### Add user to sudoers group
+```
+adduser demo_user
+sudo usermod -a -G sudo <username>
+```
+### Add docker to sudoers group
 ```
 sudo groupadd docker
 sudo usermod -a -G docker $USER
