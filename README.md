@@ -68,6 +68,8 @@ docker image ls -l
 
 ### Teamfu
 ```
+python3 manage.py migrate && python3 manage.py loaddata fixtures/prod/* && python3 manage.py ensure_adminuser --username=$TEAMFU_ADMIN_USERNAME --email=admin@teamfu.tech --password=$TEAMFU_ADMIN_PASSWORD && python3 manage.py runserver 0.0.0.0:8001
+python3 manage.py migrate && python3 manage.py loaddata fixtures/testing/* && python3 manage.py runserver 0.0.0.0:8001
 docker exec -it postgresql psql -h 127.0.0.1 -U postgres -d teamfu 
 ssh vagrant@teamfu.tech
 scp vagrant@teamfu.tech:/home/backup/20220201-11\:22\:26-teamfu.db.tar /home/jack/cloud/teamfu/db/.
