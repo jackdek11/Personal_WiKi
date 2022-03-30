@@ -1,6 +1,13 @@
 # Personal_WiKi
 personal Wiki for Jack with useful code
 
+### Deploying to Digitial ocean
+```
+git tag <tag_name>
+git push --tags
+git push origin :refs/tags/HOTFIX
+```
+
 ### Github ssh keys
 
 ```
