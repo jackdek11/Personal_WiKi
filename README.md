@@ -2,10 +2,11 @@
 personal Wiki for Jack with useful code
 
 ### Deploying to Digitial ocean
-```
-git tag <tag_name>
-git push --tags
-git push origin :refs/tags/HOTFIX
+```shell
+git tag <tag_name>                                          # tag build
+git push --tags                                             # push locally tagged builds
+git tag -d <tag_name>                                       # delete tag
+git push origin :refs/tags/<tag_name>                       # update origin with local tag
 ```
 
 ### Github ssh keys
