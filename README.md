@@ -10,8 +10,9 @@ git push origin :refs/tags/$tag                             # update origin with
 ```
 
 ### Pipelines
+- Inject os enviroment variable into json file
 ```
-jq '.key = "'"$key"'"' j.json > '$TEST_VAR' && mv '$TEST_VAR' j.json          # Inject os enviroment variable into json file
+jq '.key = "'"$key"'"' j.json > '$TEST_VAR' && mv '$TEST_VAR' j.json 
 ```
 
 ### Github ssh keys
