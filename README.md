@@ -9,6 +9,11 @@ git tag -d $tag                                             # delete tag
 git push origin :refs/tags/$tag                             # update origin with local tag
 ```
 
+### Pipelines
+```
+jq '.key = "'"$key"'"' j.json > '$TEST_VAR' && mv '$TEST_VAR' j.json          # Inject os enviroment variable into json file
+```
+
 ### Github ssh keys
 
 ```bash
