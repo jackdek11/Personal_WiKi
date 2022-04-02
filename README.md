@@ -1,6 +1,11 @@
 # Personal_WiKi
 personal Wiki for Jack with useful code
 
+### Nextcloud permission denied fix
+```
+sudo chown -R $USER:$USER *
+```
+
 ### Github ssh keys
 
 ```
