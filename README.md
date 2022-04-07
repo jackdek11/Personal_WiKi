@@ -2,7 +2,8 @@
 personal Wiki for Jack with useful code
 
 ### Nextcloud permission denied fix
-```
+```shell
+cd ~/cloud
 sudo chown -R $USER:$USER *
 ```
 
