@@ -7,6 +7,17 @@ cd ~/cloud
 sudo chown -R $USER:$USER *
 ```
 
+### Postgres issues
+If geetting a 
+```shell
+ERROR: for postgres  Cannot start service postgres: driver failed programming external connectivity on endpoint postgresql (2f0f4ce179347bfc67b4737f7b7db765e950c0fb7dd1a3ebc8b021b38ebb06df): Error starting userland proxy: listen tcp4 127.0.0.1:5432: bind: address already in use
+```
+solve with:
+```shell
+netstat -ano  tcp | grep 5432                               # see if process is running on port 5432
+sudo kill -9 `sudo lsof -t -i:5432`                         # kill process         
+```
+
 ### Github ssh keys
 #### Deploying to Digitial ocean
 ```shell
