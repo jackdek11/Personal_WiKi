@@ -1,6 +1,11 @@
 # Personal_WiKi
 personal Wiki for Jack with useful code
 
+### Get .sql file dump of remote db
+```shell
+pg_dump -h <host> -U <user> -p <port> -d <db> -W -f ~/path/to/sql.sql
+```
+
 ### Nextcloud permission denied fix
 ```shell
 cd ~/cloud
