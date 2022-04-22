@@ -106,6 +106,7 @@ docker exec -it $container
 
 docker image prune
 docker image ls -l
+docker build - < Dockerfile                                # build from docker file
 ```
 
 ### Teamfu
