@@ -136,3 +136,10 @@ sudo iwconfig wlp3s0 mode monitor
 iwconfig
 sudo iwconfig wlp3s0 mode managed sudo ip link set dev wlp3s0 up
 ```
+
+### DevOps
+```
+run: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+run: ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+run: dpkg-reconfigure debconf -f noninteractive
+```
