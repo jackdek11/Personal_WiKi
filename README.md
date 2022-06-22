@@ -6,6 +6,11 @@ personal Wiki for Jack with useful code
 pg_dump -h <host> -U <user> -p <port> -d <db> -W -f ~/path/to/sql.sql
 ```
 
+## Restoring cams
+```bash
+PGPASSWORD=${password} docker exec postgresql pg_restore -h ${host} -U ${user} -w -p ${port} -d ${db_name}  /tmp/${backup}.db.tar
+```
+
 ### Nextcloud permission denied fix
 ```shell
 cd ~/cloud
